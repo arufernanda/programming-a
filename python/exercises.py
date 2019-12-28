@@ -40,3 +40,15 @@ def installment(price):
     if price / 2.0 >= 11.5:
         return 2
     return 1
+
+
+def concept(grade):
+    if grade >= 9.0 or grade == 10.0:
+        return 'A'
+    if grade >= 7.0 or grade == 8.9:
+        return 'B'
+    if grade >= 5.0 or grade == 6.9:
+        return 'C'
+    if grade >= 4.5 or grade == 4.9:
+        return 'D'
+    return 'F'

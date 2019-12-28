@@ -37,3 +37,10 @@ def test_installment():
     assert exercises.installment(27.35) == 2
     assert exercises.installment(137.99) == 11
     assert exercises.installment(500) == 12
+
+
+def test_concept():
+    assert exercises.concept(9.5) == 'A'
+    assert exercises.concept(3.5) == 'F'
+    assert exercises.concept(8.9) == 'B'
+    assert exercises.concept(4.5) == 'D'
