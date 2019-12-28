@@ -47,3 +47,17 @@ def installment(price)
     1
   end
 end
+
+def concept(grade)
+  if grade >= 9.0 || grade == 10.0
+    'A'
+  elsif grade >= 7.0 || grade == 8.9
+    'B'
+  elsif grade >= 5.0 || grade == 6.9
+    'C'
+  elsif grade >= 4.5 || grade == 4.9
+    'D'
+  else
+    'F'
+  end
+end
