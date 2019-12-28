@@ -18,3 +18,12 @@ def test_even_or_odd():
     assert exercises.even_or_odd(3) == 'odd'
     assert exercises.even_or_odd(533) == 'odd'
     assert exercises.even_or_odd(7567) == 'odd'
+
+
+def test_discount():
+    assert exercises.discounts(10, 10) == 9
+    assert exercises.discounts(100, 5) == 95
+    assert exercises.discounts(50.50, 10) == 45.45
+    assert exercises.discounts(1000, 25) == 750
+    assert exercises.discounts(76, 2.5) == 74.10
+    assert exercises.discounts(9.90, 10) == 9
