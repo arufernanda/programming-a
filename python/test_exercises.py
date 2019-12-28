@@ -27,3 +27,13 @@ def test_discount():
     assert exercises.discounts(1000, 25) == 750
     assert exercises.discounts(76, 2.5) == 74.10
     assert exercises.discounts(9.90, 10) == 9
+
+
+def test_installment():
+    assert exercises.installment(23) == 2
+    assert exercises.installment(20) == 1
+    assert exercises.installment(10) == 1
+    assert exercises.installment(11.59) == 1
+    assert exercises.installment(27.35) == 2
+    assert exercises.installment(137.99) == 11
+    assert exercises.installment(500) == 12
