@@ -1,6 +1,5 @@
 /ruby/.bundle
 
 /python/.cache
-/python/.pylintrc
 /python/__pycache__
 /python/*.pyc

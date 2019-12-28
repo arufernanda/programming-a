@@ -24,11 +24,11 @@ RSpec.describe '.even_or_odd?' do
       expect(even_or_odd?(3)).to eq 'odd'
     end
 
-    it 'returns odd for five hundred' do
+    it 'returns odd for five hundred thirty-three' do
       expect(even_or_odd?(533)).to eq 'odd'
     end
 
-    it 'returns odd for seven thousand' do
+    it 'returns odd for seven thousand five hundred sixty-seven' do
       expect(even_or_odd?(7567)).to eq 'odd'
     end
   end
