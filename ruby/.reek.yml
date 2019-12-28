@@ -1,3 +1,5 @@
 detectors: 
   UtilityFunction:
     enabled: false
+  TooManyStatements:
+    enabled: false
