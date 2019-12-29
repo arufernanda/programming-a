@@ -61,3 +61,8 @@ def concept(grade)
     'F'
   end
 end
+
+def memory(giga)
+  cd = ((giga * 1024.0) / 700.0).ceil
+  cd
+end

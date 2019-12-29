@@ -1,3 +1,6 @@
+import math
+
+
 def sum_numbers(number_one, number_two):
     return number_one + number_two
 
@@ -52,3 +55,8 @@ def concept(grade):
     if grade >= 4.5 or grade == 4.9:
         return 'D'
     return 'F'
+
+
+def memory(giga):
+    cd_rom = math.ceil((giga * 1024) / 700)
+    return cd_rom
