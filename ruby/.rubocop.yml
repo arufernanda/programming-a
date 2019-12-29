@@ -17,3 +17,6 @@ Metrics/CyclomaticComplexity:
 
 Metrics/AbcSize:
   Enabled: false
+
+Style/MultipleComparison:
+  Enabled: false

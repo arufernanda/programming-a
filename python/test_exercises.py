@@ -50,3 +50,10 @@ def test_memory():
     assert exercises.memory(3.4) == 5
     assert exercises.memory(1.4) == 3
     assert exercises.memory(1) == 2
+
+
+def test_type_color():
+    assert exercises.type_color('red') == 'primary'
+    assert exercises.type_color('orange') == 'secondary'
+    assert exercises.type_color('pink') == 'others'
+    assert exercises.type_color('magent') == 'others'

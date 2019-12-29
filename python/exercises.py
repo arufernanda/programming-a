@@ -60,3 +60,11 @@ def concept(grade):
 def memory(giga):
     cd_rom = math.ceil((giga * 1024) / 700)
     return cd_rom
+
+
+def type_color(color):
+    if color in ('red', 'yellow', 'blue'):
+        return 'primary'
+    if color in ('green', 'orange', 'purple'):
+        return 'secondary'
+    return 'others'
