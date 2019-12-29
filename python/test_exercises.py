@@ -63,6 +63,6 @@ def test_discount_max():
     assert exercises.discount_max(11.0) == 0
     assert exercises.discount_max(13.0) == 15
     assert exercises.discount_max(300.0) == 96
-    assert exercises.discount_max(257.21) == 96
+    assert exercises.discount_max(257.21) == 95
     assert exercises.discount_max(275.0) == 96
-    assert exercises.discount_max(274.99) == 96
+    assert exercises.discount_max(274.99) == 95

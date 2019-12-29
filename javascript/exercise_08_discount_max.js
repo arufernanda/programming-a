@@ -1,5 +1,5 @@
 function discountMax(price) {
-  discountMaxm = Math.round(((price - 11.0) * 100) / price);
+  discountMaxm = Math.floor(((price - 11.0) * 100) / price);
   return discountMaxm;
 }
 

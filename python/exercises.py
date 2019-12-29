@@ -71,5 +71,5 @@ def type_color(color):
 
 
 def discount_max(price):
-    discount_maxm = round(((price - 11.0) * 100) / price)
+    discount_maxm = math.floor(((price - 11.0) * 100) / price)
     return discount_maxm
