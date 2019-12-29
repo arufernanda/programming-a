@@ -15,6 +15,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'no-undef': 'off'
+    'no-undef': 'off',
+    'no-console': 'off'
   },
 };
