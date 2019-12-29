@@ -76,3 +76,8 @@ def colors_type(color)
     'others'
   end
 end
+
+def discount_max(price)
+  discount_maxm = (((price - 11.0) * 100) / price).floor
+  discount_maxm
+end

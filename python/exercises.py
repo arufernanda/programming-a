@@ -68,3 +68,8 @@ def type_color(color):
     if color in ('green', 'orange', 'purple'):
         return 'secondary'
     return 'others'
+
+
+def discount_max(price):
+    discount_maxm = math.floor(((price - 11.0) * 100) / price)
+    return discount_maxm

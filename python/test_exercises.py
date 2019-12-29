@@ -57,3 +57,12 @@ def test_type_color():
     assert exercises.type_color('orange') == 'secondary'
     assert exercises.type_color('pink') == 'others'
     assert exercises.type_color('magent') == 'others'
+
+
+def test_discount_max():
+    assert exercises.discount_max(11.0) == 0
+    assert exercises.discount_max(13.0) == 15
+    assert exercises.discount_max(300.0) == 96
+    assert exercises.discount_max(257.21) == 95
+    assert exercises.discount_max(275.0) == 96
+    assert exercises.discount_max(274.99) == 95
