@@ -44,3 +44,9 @@ def test_concept():
     assert exercises.concept(3.5) == 'F'
     assert exercises.concept(8.9) == 'B'
     assert exercises.concept(4.5) == 'D'
+
+
+def test_memory():
+    assert exercises.memory(3.4) == 5
+    assert exercises.memory(1.4) == 2
+    assert exercises.memory(1) == 1

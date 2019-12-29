@@ -52,3 +52,8 @@ def concept(grade):
     if grade >= 4.5 or grade == 4.9:
         return 'D'
     return 'F'
+
+
+def memory(giga):
+    cd_rom = (round((giga * 1024) / 700))
+    return cd_rom
