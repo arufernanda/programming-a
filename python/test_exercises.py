@@ -48,5 +48,5 @@ def test_concept():
 
 def test_memory():
     assert exercises.memory(3.4) == 5
-    assert exercises.memory(1.4) == 2
-    assert exercises.memory(1) == 1
+    assert exercises.memory(1.4) == 3
+    assert exercises.memory(1) == 2

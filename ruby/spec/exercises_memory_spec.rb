@@ -7,11 +7,11 @@ RSpec.describe 'memory' do
     end
 
     it 'returns 2 for 1.4 gigas' do
-      expect(memory(1.4)).to eq 2
+      expect(memory(1.4)).to eq 3
     end
 
-    it 'returns 1 for 1 gigas' do
-      expect(memory(1)).to eq 1
+    it 'returns 2 for 1 gigas' do
+      expect(memory(1)).to eq 2
     end
   end
 end

@@ -1,5 +1,5 @@
 function memory(giga) {
-  cdRom = Math.round((giga * 1024) / 700);
+  cdRom = Math.ceil((giga * 1024) / 700);
   return cdRom;
 }
 

@@ -63,6 +63,6 @@ def concept(grade)
 end
 
 def memory(giga)
-  cd = ((giga * 1024) / 700).round
+  cd = ((giga * 1024.0) / 700.0).ceil
   cd
 end

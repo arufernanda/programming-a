@@ -1,3 +1,6 @@
+import math
+
+
 def sum_numbers(number_one, number_two):
     return number_one + number_two
 
@@ -55,5 +58,5 @@ def concept(grade):
 
 
 def memory(giga):
-    cd_rom = (round((giga * 1024) / 700))
+    cd_rom = math.ceil((giga * 1024) / 700)
     return cd_rom
