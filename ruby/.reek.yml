@@ -3,3 +3,5 @@ detectors:
     enabled: false
   TooManyStatements:
     enabled: false
+  ControlParameter:
+    enabled: false

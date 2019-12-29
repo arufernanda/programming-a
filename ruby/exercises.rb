@@ -66,3 +66,13 @@ def memory(giga)
   cd = ((giga * 1024.0) / 700.0).ceil
   cd
 end
+
+def colors_type(color)
+  if color == 'red' || color == 'yellow' || color == 'blue'
+    'primary'
+  elsif color == 'green' || color == 'orange' || color == 'purple'
+    'secondary'
+  else
+    'others'
+  end
+end
