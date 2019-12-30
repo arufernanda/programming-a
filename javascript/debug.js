@@ -1,3 +1,2 @@
-const sum = require('./exercise_01_sum');
-
-console.log(sum(2, 2));
+const arrayLast = require('./exercise_12_array_last');
+console.log(arrayLast([3, 2, 7, 5]));

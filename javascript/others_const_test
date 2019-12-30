@@ -1,0 +1,6 @@
+  expect(array_last([3, 2, 7, 5])).toBe(5);
+  expect(array_second([3, 2, 7, 5])).toBe(2);
+  expect(array_third([3, 2, 7, 5])).toBe(7);
+  expect(array_fisrt_two([3, 2, 7, 5])).toBe([3,2]);
+  expect(array_last_three([3, 2, 7, 5])).toBe([2, 7, 5]);
+  expect(array_midle_two([3, 2, 7, 5])).toBe([2, 5]);
