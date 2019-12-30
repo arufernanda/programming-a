@@ -81,3 +81,43 @@ def discount_max(price)
   discount_maxm = (((price - 11.0) * 100) / price).floor
   discount_maxm
 end
+
+def array_count(numbers)
+  numbers.count
+end
+
+def array_max(numbers)
+  numbers.max
+end
+
+def array_min(numbers)
+  numbers.min
+end
+
+def array_first(numbers)
+  numbers.first
+end
+
+def array_last(numbers)
+  numbers.last
+end
+
+def array_second(numbers)
+  numbers[1]
+end
+
+def array_third(numbers)
+  numbers[2]
+end
+
+def array_fisrt_two(numbers)
+  numbers[0..1]
+end
+
+def array_last_three(numbers)
+  numbers[-3..-1]
+end
+
+def array_midle_two(numbers)
+  numbers[1..2]
+end

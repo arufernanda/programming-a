@@ -66,3 +66,16 @@ def test_discount_max():
     assert exercises.discount_max(257.21) == 95
     assert exercises.discount_max(275.0) == 96
     assert exercises.discount_max(274.99) == 95
+
+
+def test_array_functions():
+    assert exercises.array_max([3, 2, 7, 5]) == 7
+    assert exercises.array_min([3, 2, 7, 5]) == 2
+    assert exercises.array_first([3, 2, 7, 5]) == 3
+    assert exercises.array_last([3, 2, 7, 5]) == 5
+    assert exercises.array_second([3, 2, 7, 5]) == 2
+    assert exercises.array_third([3, 2, 7, 5]) == 7
+    assert exercises.array_fisrt_two([3, 2, 7, 5]) == [3, 2]
+    assert exercises.array_last_three([3, 2, 7, 5]) == [2, 7, 5]
+    assert exercises.array_midle_two([3, 2, 7, 5]) == [2, 5]
+    assert exercises.array_last_three([3, 2, 7, 5, 8, 9, 0]) == [8, 9, 0]

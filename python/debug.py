@@ -1,2 +1,2 @@
 import exercises
-print(exercises.sum_numbers(2, 3))
+print(exercises.array_fisrt_two([3, 2, 7, 5]))

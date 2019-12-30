@@ -73,3 +73,39 @@ def type_color(color):
 def discount_max(price):
     discount_maxm = math.floor(((price - 11.0) * 100) / price)
     return discount_maxm
+
+
+def array_max(numbers):
+    return max(numbers)
+
+
+def array_min(numbers):
+    return min(numbers)
+
+
+def array_first(numbers):
+    return numbers[0]
+
+
+def array_last(numbers):
+    return numbers[-1]
+
+
+def array_second(numbers):
+    return numbers[1]
+
+
+def array_third(numbers):
+    return numbers[2]
+
+
+def array_fisrt_two(numbers):
+    return numbers[:2]
+
+
+def array_last_three(numbers):
+    return numbers[-3:]
+
+
+def array_midle_two(numbers):
+    return numbers[1::2]
