@@ -1,5 +1,5 @@
 function arrayFirst(numbers) {
-  return f = numbers[0];
+  return numbers[0];
 }
 
 module.exports = arrayFirst;
