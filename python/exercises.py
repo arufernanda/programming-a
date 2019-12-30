@@ -104,7 +104,7 @@ def array_fisrt_two(numbers):
 
 
 def array_last_three(numbers):
-    return numbers[1:]
+    return numbers[-3:]
 
 
 def array_midle_two(numbers):

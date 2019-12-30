@@ -1,5 +1,5 @@
 function arrayThird(numbers) {
-  return numbers[1];
+  return numbers[2];
 }
 
 module.exports = arrayThird;
