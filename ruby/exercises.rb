@@ -121,4 +121,3 @@ end
 def array_midle_two(numbers)
   numbers[1..2]
 end
-
