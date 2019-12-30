@@ -78,3 +78,4 @@ def test_array_functions():
     assert exercises.array_fisrt_two([3, 2, 7, 5]) == [3, 2]
     assert exercises.array_last_three([3, 2, 7, 5]) == [2, 7, 5]
     assert exercises.array_midle_two([3, 2, 7, 5]) == [2, 5]
+    assert exercises.array_last_three([3, 2, 7, 5, 8, 9, 0]) == [8, 9, 0]

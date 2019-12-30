@@ -21,5 +21,9 @@ RSpec.describe '.function_array' do
     it 'returns 7 for last' do
       expect(array_last([3, 2, 5, 7])).to eq 7
     end
+
+    it 'returns 7 for last three' do
+    expect(array_last_three([3, 2, 7, 5, 8, 9, 0])).to eq [8, 9, 0]
+    end
   end
 end
