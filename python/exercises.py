@@ -84,15 +84,15 @@ def array_min(numbers):
 
 
 def array_first(numbers):
-    return (numbers[0])
+    return numbers[0]
 
 
 def array_last(numbers):
-    return(numbers[-1])
+    return numbers[-1]
 
 
 def array_second(numbers):
-    return (numbers[1])
+    return numbers[1]
 
 
 def array_third(numbers):
@@ -100,7 +100,7 @@ def array_third(numbers):
 
 
 def array_fisrt_two(numbers):
-    return (numbers[:2])
+    return numbers[:2]
 
 
 def array_last_three(numbers):
