@@ -161,4 +161,6 @@ def array_in_array(numbers)
 
   all_numbers << odd_numbers
   all_numbers << even_numbers
+
+  all_numbers
 end

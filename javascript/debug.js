@@ -1,3 +1,3 @@
-const arrayIndex = require('./exercise_20_index_array');
+const arrayInArray = require('./exercise_21_array_in_array');
 
-console.log('result:', arrayIndex([3, 2, 7, 5, 8, 9]));
+console.log('result:', arrayInArray([3, 2, 7, 5, 8, 9]));
