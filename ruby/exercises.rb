@@ -123,6 +123,17 @@ def array_midle_two(numbers)
 end
 
 def array_even_numbers(numbers)
-  numbers.select do |number| number.even?
+  numbers.select do |number|
+    number.even?
   end
+end
+
+def array_even_numbers_two(numbers)
+  filtered_numbers = []
+
+  numbers.each do |number|
+    filtered_numbers << number if number.even?
+  end
+
+  filtered_numbers
 end
