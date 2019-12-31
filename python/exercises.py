@@ -124,7 +124,7 @@ def filter_array(numbers):
 def index_array(numbers):
     filtered_index = []
 
-    for index, number in enumerate (numbers):
+    for index, number in enumerate(numbers):
         if number%2 != 0:
             filtered_index.append(index)
 
