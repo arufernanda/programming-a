@@ -20,3 +20,6 @@ Metrics/AbcSize:
 
 Style/MultipleComparison:
   Enabled: false
+
+Style/SymbolProc: 
+  Enabled: false

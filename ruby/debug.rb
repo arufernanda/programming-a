@@ -1,2 +1,2 @@
 require './exercises'
-puts array_last_three([3, 2, 5, 7]).inspect
+puts array_even_numbers_two([8, 9, 10, 11, 12, 14]).inspect

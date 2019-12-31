@@ -1,2 +1,2 @@
 import exercises
-print(exercises.array_fisrt_two([3, 2, 7, 5]))
+print(exercises.filter_array([8, 9, 10, 11, 12, 14]))
