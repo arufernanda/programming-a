@@ -151,7 +151,6 @@ end
 def array_in_array(numbers)
   even_numbers = []
   odd_numbers = []
-  odd_numbers = []
   all_numbers = []
 
   numbers.each do |number|
