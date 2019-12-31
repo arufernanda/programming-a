@@ -84,3 +84,8 @@ def test_array_functions():
 def test_filter_array():
     assert exercises.filter_array([1, 2, 3, 4]) == [2, 4]
     assert exercises.filter_array([8, 9, 10, 11, 12, 14]) == [8, 10, 12, 14]
+
+
+def test_index_array():
+    assert exercises.index_array([11, 12, 13, 14, 15]) == [0, 2, 4]
+    assert exercises.index_array([10, 11, 12, 13]) == [1, 3]

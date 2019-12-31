@@ -115,7 +115,17 @@ def filter_array(numbers):
     filtered_numbers = []
 
     for number in numbers:
-        if number%2 == 0:
+        if number % 2 == 0:
             filtered_numbers.append(number)
 
     return filtered_numbers
+
+
+def index_array(numbers):
+    filtered_index = []
+
+    for index, number in enumerate(numbers):
+        if number % 2 != 0:
+            filtered_index.append(index)
+
+    return filtered_index

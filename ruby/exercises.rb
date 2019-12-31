@@ -137,3 +137,13 @@ def array_even_numbers_two(numbers)
 
   filtered_numbers
 end
+
+def array_index(numbers)
+  filtered_index = []
+
+  numbers.each_with_index do |number, index|
+    filtered_index << index if number.odd?
+  end
+
+  filtered_index
+end

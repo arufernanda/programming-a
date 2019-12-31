@@ -1,3 +1,3 @@
-const arrayFilterTwo = require('./exercise_19_filter_array_two');
+const arrayIndex = require('./exercise_20_index_array');
 
-console.log('result:', arrayFilterTwo([3, 2, 7, 5, 8, 9]));
+console.log('result:', arrayIndex([3, 2, 7, 5, 8, 9]));
