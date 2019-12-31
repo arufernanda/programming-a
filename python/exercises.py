@@ -129,3 +129,21 @@ def index_array(numbers):
             filtered_index.append(index)
 
     return filtered_index
+
+
+def array_in_array(numbers):
+    odd_numbers = []
+    even_numbers = []
+    all_numbers = []
+
+    for number in numbers:
+        if number % 2 != 0:
+            odd_numbers.append(number)
+        else:
+            even_numbers.append(number)
+
+    all_numbers.append(odd_numbers)
+    all_numbers.append(even_numbers)
+
+    return all_numbers
+ 
