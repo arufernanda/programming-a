@@ -145,5 +145,5 @@ def array_index(numbers)
     filtered_index << index if number.odd?
   end
 
-   filtered_index
+  filtered_index
 end
