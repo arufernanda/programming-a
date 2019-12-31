@@ -147,3 +147,18 @@ def array_index(numbers)
 
   filtered_index
 end
+
+def array_in_array(numbers)
+  even_numbers = []
+  odd_numbers = []
+  odd_numbers = []
+  all_numbers = []
+
+  numbers.each do |number|
+    odd_numbers << number if number.odd?
+    even_numbers << number if number.even?
+  end
+
+  all_numbers << odd_numbers
+  all_numbers << even_numbers
+end
