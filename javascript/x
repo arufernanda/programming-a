@@ -1,0 +1,6 @@
+array [11, 12, 13, 14, 15]
+return indices dos valores impares
+0, 2, 4
+
+array [10, 11, 12, 13]
+1, 3
