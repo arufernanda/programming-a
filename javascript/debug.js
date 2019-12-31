@@ -1,3 +1,3 @@
-const arrayLastThree = require('./exercise_16_last_three');
+const arrayFilterTwo = require('./exercise_19_filter_array_two');
 
-console.log(arrayLastThree([3, 2, 7, 5, 8, 9, 0]));
+console.log('result:', arrayFilterTwo([3, 2, 7, 5, 8, 9]));

@@ -16,6 +16,9 @@ module.exports = {
   },
   rules: {
     'no-undef': 'off',
-    'no-console': 'off'
+    'no-console': 'off',
+    'no-restricted-syntax': 'off',
+    'prefer-arrow-callback': 'off',
+    'func-names': 'off'
   },
 };
