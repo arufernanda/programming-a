@@ -181,7 +181,7 @@ def array_reduce_even(numbers_one, numbers_two, numbers_three)
     even_numbers << number_two if number_two.even?
   end
 
-  if numbers_three[0].kind_of?(Array)
+  if numbers_three[0].is_a?(Array)
     numbers_three[0][0].each do |number_three|
       even_numbers << number_three if number_three.even?
     end
@@ -195,4 +195,15 @@ def array_reduce_even(numbers_one, numbers_two, numbers_three)
 
   even_numbers = even_numbers.uniq
   even_numbers
+end
+
+def array_reduce_sum(numbers_one, numbers_two, numbers_three)
+  even_numbers = array_reduce_even(numbers_one, numbers_two, numbers_three)
+  sum_of_numbers = 0
+
+  even_numbers.each do |even_number|
+    sum_of_numbers += even_number
+  end
+
+  sum_of_numbers
 end

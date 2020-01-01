@@ -100,3 +100,9 @@ def test_reduce_array():
     assert exercises.reduce_array(
         [1, 2, 3, [2, 3, 4], 5, 6], [6, 7, 8], [[[9, 10]]]) == [2, 4, 6, 8, 10]
     assert exercises.reduce_array([1, 2], [], [3, 4]) == [2, 4]
+
+
+def test_sum_array():
+    assert exercises.sum_array(
+        [1, 2, 3, [2, 3, 4], 5, 6], [6, 7, 8], [[[9, 10]]]) == 30
+    assert exercises.sum_array([1, 2], [], [3, 4]) == 6

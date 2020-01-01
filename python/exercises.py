@@ -178,3 +178,13 @@ def reduce_array(numbers_one, numbers_two, numbers_three):
                 even_numbers.append(number_three)
 
     return even_numbers
+
+
+def sum_array(numbers_one, numbers_two, numbers_three):
+    even_arrays = reduce_array(numbers_one, numbers_two, numbers_three)
+    sum_of_numbers = 0
+
+    for even_array in even_arrays:
+        sum_of_numbers = sum_of_numbers + even_array
+
+    return sum_of_numbers

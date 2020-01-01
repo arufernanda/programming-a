@@ -5,3 +5,7 @@ detectors:
     enabled: false
   ControlParameter:
     enabled: false
+  DuplicateMethodCall:
+    enabled: false
+  NilCheck:
+    enabled: false
