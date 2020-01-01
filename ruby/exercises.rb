@@ -163,3 +163,36 @@ def array_in_array(numbers)
 
   all_numbers
 end
+
+def array_reduce_even(numbers_one, numbers_two, numbers_three)
+  even_numbers = []
+
+  unless numbers_one[3].nil?
+    numbers_one[3].each do |number_one|
+      even_numbers << number_one if number_one.even?
+    end
+  end
+
+  numbers_one.each do |number_one|
+    even_numbers << number_one if number_one != [2, 3, 4] && number_one.even?
+  end
+
+  numbers_two.each do |number_two|
+    even_numbers << number_two if number_two.even?
+  end
+
+  if numbers_three[0][0] != 1
+    numbers_three[0][0].each do |number_three|
+      even_numbers << number_three if number_three.even?
+    end
+  end
+
+  if numbers_three != [[[9, 10]]]
+    numbers_three.each do |number_three|
+      even_numbers << number_three if number_three.even?
+    end
+  end
+
+  even_numbers = even_numbers.uniq
+  even_numbers
+end

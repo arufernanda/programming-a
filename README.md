@@ -4,7 +4,7 @@
 ## Ruby
 Installation instructions:
 ```bash
-gem install bundle
+gem install bundler
 bundle install
 ```
 Run linter and tests:
@@ -13,6 +13,11 @@ bundle exec rubocop
 bundle exec reek
 bundle exec rspec
 bundle exec spec --format documentation
+```
+Debug:
+
+```bash
+ruby debug.rb
 ```
 
 ## Python
@@ -27,6 +32,11 @@ pylint *.py
 pycodestyle *.py
 pytest *.py
 ```
+Debug:
+
+```bash
+python debug.py
+```
 
 ## JavaScript
 
@@ -38,4 +48,9 @@ Run linter and tests:
 ```bash
 yarn eslint *.js
 yarn test *.js
+```
+Debug:
+
+```bash
+node debug.js
 ```

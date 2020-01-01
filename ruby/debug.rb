@@ -1,2 +1,2 @@
 require './exercises'
-puts array_index([8, 9, 10, 11, 12, 14]).inspect
+puts array_reduce_even([1, 2], [], [3, 4]).inspect
