@@ -19,6 +19,7 @@ module.exports = {
     'no-console': 'off',
     'no-restricted-syntax': 'off',
     'prefer-arrow-callback': 'off',
-    'func-names': 'off'
+    'func-names': 'off',
+    'guard-for-in': 'off'
   },
 };
