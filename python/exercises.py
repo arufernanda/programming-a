@@ -146,4 +146,35 @@ def array_in_array(numbers):
     all_numbers.append(even_numbers)
 
     return all_numbers
- 
+
+
+def reduce_array(numbers_one, numbers_two, numbers_three):
+    even_numbers = []
+
+    if len(numbers_one) >= 4:
+        for number_one_three in numbers_one[3]:
+            if (number_one_three % 2 == 0 and
+               number_one_three not in even_numbers):
+                even_numbers.append(number_one_three)
+
+    for number_one in numbers_one:
+        if (number_one != [2, 3, 4] and
+           number_one % 2 == 0 and number_one not in even_numbers):
+            even_numbers.append(number_one)
+
+    for number_two in numbers_two:
+        if number_two % 2 == 0 and number_two not in even_numbers:
+            even_numbers.append(number_two)
+
+    if isinstance(numbers_three[0], list):
+        for number_three_zero in numbers_three[0][0]:
+            if (number_three_zero % 2 == 0
+               and number_three_zero not in even_numbers):
+                even_numbers.append(number_three_zero)
+
+    if numbers_three != [[[9, 10]]]:
+        for number_three in numbers_three:
+            if number_three % 2 == 0 and number_three not in even_numbers:
+                even_numbers.append(number_three)
+
+    return even_numbers

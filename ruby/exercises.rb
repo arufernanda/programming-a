@@ -181,7 +181,7 @@ def array_reduce_even(numbers_one, numbers_two, numbers_three)
     even_numbers << number_two if number_two.even?
   end
 
-  if numbers_three[0][0] != 1
+  if numbers_three[0].kind_of?(Array)
     numbers_three[0][0].each do |number_three|
       even_numbers << number_three if number_three.even?
     end
