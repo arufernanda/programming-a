@@ -207,3 +207,21 @@ def array_reduce_sum(numbers_one, numbers_two, numbers_three)
 
   sum_of_numbers
 end
+
+def hash_spendings(transactions, dollar)
+  spending_in_real = 0
+
+  transactions.each do |for_transactions|
+    if for_transactions['amount'].negative? &&
+       for_transactions['currency'] == 'R$'
+      spending_in_real += for_transactions['amount']
+    end
+
+    if for_transactions['amount'].negative? &&
+       for_transactions['currency'] == 'US$'
+      spending_in_real += for_transactions['amount'] * dollar
+    end
+  end
+
+  spending_in_real.round(2).abs
+end

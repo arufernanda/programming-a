@@ -20,6 +20,15 @@ Debug:
 ruby debug.rb
 ```
 
+REPL:
+```bash
+irb
+```
+To exit:
+```bash
+exit
+```
+
 ## Python
 Installation instructions:
 ```bash
@@ -37,7 +46,14 @@ Debug:
 ```bash
 python debug.py
 ```
-
+REPL:
+```bash
+python
+```
+To exit:
+```bash
+exit()
+```
 ## JavaScript
 
 Installation instructions:
@@ -54,3 +70,9 @@ Debug:
 ```bash
 node debug.js
 ```
+REPL:
+```bash
+node
+```
+To exit:
+<kbd>Ctrl</kdb> + <kbd>C</kbd> <kbd>Ctrl</kdb> + <kbd>C</kbd>
