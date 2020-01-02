@@ -106,3 +106,17 @@ def test_sum_array():
     assert exercises.sum_array(
         [1, 2, 3, [2, 3, 4], 5, 6], [6, 7, 8], [[[9, 10]]]) == 30
     assert exercises.sum_array([1, 2], [], [3, 4]) == 6
+
+
+
+def hash_spendings():
+    transactions = [
+      { 'currency': 'R$', 'amount': 15.75 },
+      { 'currency': 'R$', 'amount': -17.50 },
+      { 'currency': 'US$', 'amount': 7.98 },
+      { 'currency': 'US$', 'amount': -18.70 },
+      { 'currency': 'US$', 'amount': 2 }
+    ]
+
+    assert exercises.hash_spendings(transactions, 4.02) == 92.67
+    assert exercises.hash_spendings(transactions, 3.89) == 91.93
