@@ -13,7 +13,7 @@ RSpec.describe '.hash_spendings' do
     it 'returns 92,68 the dollar at R$4,02' do
       expect(
         hash_spendings(transactions, 4.02)
-      ).to eq 92.67
+      ).to eq 92.68
     end
 
     it 'returns 91,93 the dollar at R$3,98' do

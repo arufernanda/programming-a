@@ -190,15 +190,19 @@ def sum_array(numbers_one, numbers_two, numbers_three):
     return sum_of_numbers
 
 
-
 def hash_spendings(transactions, dollar):
     spending_in_real = 0
 
     for for_transactions in transactions:
-        if for_transactions['amount'] < 0 and for_transactions['currency'] == 'R$':
+        if (for_transactions['amount'] < 0
+                and for_transactions['currency'] == 'R$'):
             spending_in_real = for_transactions['amount'] + spending_in_real
 
-        if for_transactions['amount'] < 0 and for_transactions['currency'] == 'US$':
-            spending_in_real = (for_transactions['amount'] * dollar) + spending_in_real
+        if (for_transactions['amount'] < 0
+                and for_transactions['currency'] == 'US$'):
+            spending_in_real = (
+                (for_transactions['amount'] * dollar) + spending_in_real)
 
-    return spending_in_real
+    spending_in_real_abs = abs(spending_in_real)
+    spending_in_real_round = math.ceil(spending_in_real_abs * 100.0) / 100.0
+    return spending_in_real_round

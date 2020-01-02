@@ -223,5 +223,5 @@ def hash_spendings(transactions, dollar)
     end
   end
 
-  spending_in_real.round(2).abs
+  spending_in_real.abs.ceil(2)
 end

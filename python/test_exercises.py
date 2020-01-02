@@ -108,15 +108,14 @@ def test_sum_array():
     assert exercises.sum_array([1, 2], [], [3, 4]) == 6
 
 
-
-def hash_spendings():
+def test_hash_spendings():
     transactions = [
-      { 'currency': 'R$', 'amount': 15.75 },
-      { 'currency': 'R$', 'amount': -17.50 },
-      { 'currency': 'US$', 'amount': 7.98 },
-      { 'currency': 'US$', 'amount': -18.70 },
-      { 'currency': 'US$', 'amount': 2 }
+        {'currency': 'R$', 'amount': 15.75},
+        {'currency': 'R$', 'amount': -17.50},
+        {'currency': 'US$', 'amount': 7.98},
+        {'currency': 'US$', 'amount': -18.70},
+        {'currency': 'US$', 'amount': 2}
     ]
 
-    assert exercises.hash_spendings(transactions, 4.02) == 92.67
-    assert exercises.hash_spendings(transactions, 3.89) == 91.93
+    assert exercises.hash_spendings(transactions, 4.02) == 92.68
+    assert exercises.hash_spendings(transactions, 3.98) == 91.93
