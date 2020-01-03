@@ -121,7 +121,7 @@ def test_hash_spendings():
     assert exercises.hash_spendings(transactions, 3.98) == 91.93
 
 
-def test_hash_spendings():
+def test_bank_account():
     transactions = [
         { 'description': 'pão', 'currency': 'R$', 'amount': -13.21 },
         { 'description': 'chocolate', 'currency': 'US$', 'amount': -2.35 },
@@ -137,7 +137,7 @@ def test_hash_spendings():
         { 'description': 'suco de laranja', 'currency': 'R$', 'amount': 9.62 }
     ]
 
-    assert exercises.hash_spendings(transactions, debt, 4.02) == expect_result = [
+    assert exercises.bank_account(transactions, debt, 4.02) == [
         {'balance': 0.02,'transactions': [
         { 'description': 'refrigerante', 'currency': 'R$', 'amount': -7.10 },
         { 'description': 'arroz', 'currency': 'R$', 'amount': -13.21 },
