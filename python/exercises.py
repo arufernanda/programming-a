@@ -231,9 +231,7 @@ def bank_account(transactions, debt, dollar):
             debt_negative = {'description': for_debt['description'],
                              'currency': for_debt['currency'],
                              'amount': -(for_debt['amount'])}
-            transactions_done = debit_negative
-
-
+            transactions_done = debt_negative
         else:
             peding_debt = for_debt
 
