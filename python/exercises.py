@@ -238,8 +238,8 @@ def bank_account(transactions, debt, dollar):
     for for_transactions in transactions:
         transactions_done = for_transactions
 
-    expect_result = {'balance': round(balance_trans, 2),
-                     'transactions': transactions_done,
-                     'peding_debt': peding_debt}
+    expect_result = {'balance': round(balance_trans, 2) ,
+                     'transactions': [transactions_done],
+                     'peding_debt': [peding_debt]}
 
     return expect_result
