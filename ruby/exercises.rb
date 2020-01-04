@@ -268,20 +268,22 @@ def hash_bank(transactions, debt, dollar)
   expect_result
 end
 
-def doc_email(email)
-  name = []
-  provider = []
-  cust = []
-  customer = []
+def doc_email(emails)
+  customers = []
+  stats = {}
 
+  emails.each do |email|
+    email_parts = email.split('@')
 
+    name = email_parts[0].capitalize
+    provider = email_parts[1].downcase
 
-  email.each do |for_email|
-    cust = for_email.split('@')
-    name = cust[0]
-    provider = cust[1]
-    customer << {'name' => name, 'provider' => provider}
-   end
+    customers << { 'name' => name, 'provider' => provider }
 
-puts "customer: " + customer.inspect
+    stats[provider] = 0 unless stats.key?(provider)
+
+    stats[provider] += 1
+  end
+
+  { 'customers' => customers, 'stats' => stats }
 end
