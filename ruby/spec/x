@@ -1,0 +1,31 @@
+def parse_file(file_name)
+  file_path = "./spec/" + file_name
+  debt = {}
+
+  puts "file_name: " + file_name
+  puts "file_path: " + file_path  
+
+  data = File.read(file_path)
+
+  linhas = data.split("\r\n")
+
+  linhas.each do |linha|
+    linha_por_linha =  linha.split(',').inspect
+
+
+    if linha != 'name' && linha != 'debt'
+      debt = {'name' => linha.split(',')[0], 'debt' => linha.split(',')[1]}
+      puts debt.inspect
+    end
+
+      if debt['name'] == 'name'
+        puts 'true'
+      end
+
+  end
+
+
+    
+total << debt['value'].sum
+    puts total
+

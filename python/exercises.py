@@ -208,38 +208,52 @@ def hash_spendings(transactions, dollar):
     return spending_in_real_round
 
 
-def bank_account(transactions, debt, dollar):
-    balance_trans = 0
-    peding_debt = []
-    transactions_done = []
-    debt_negative = []
+def doc_email(emails):
+    customers = []
+    stats = {}
+    gmail = 0
+    hotmail = 0
+    yahoo = 0
+    yahoobr = 0
+    results = {}
 
-    for for_transactions in transactions:
-        if for_transactions['currency'] == 'R$':
-            balance_trans = for_transactions['amount'] + balance_trans
+    for email in emails:
+      email_parts = email.split('@')
+    
+      name = email_parts[0]
+      provider = email_parts[1].lower
+
+      customers = { 'name': name, 'provider': provider()}
+
+      print (customers)
+      print ('________________________')
+
+      if 'gmail' in provider():
+        gmail = 1 + gmail
+
+      if 'hotmail' in provider():
+        hotmail = 1 + hotmail
+
+      if 'yahoo' in provider() and '.br' not in provider():
+        yahoo = 1 + yahoo
+
+      if 'yahoo.com.br' in provider():
+        yahoobr = 1 + yahoobr
+
+    results = { 'status': {
+                'gmail.com': gmail,
+                'hotmail.com': hotmail,
+                'yahoo.com': yahoo,
+                'yahoo.com.br': yahoobr
+                },
+                'customers': customers
+            }
+      
+    print (results)
 
 
-        if for_transactions['currency'] == 'US$':
-            balance_trans = (for_transactions['amount'] * dollar) + balance_trans
 
-    for for_debt in debt:
-        if for_debt['currency'] == 'US$':
-            for_debt['amount'] = round((for_debt['amount'] * dollar), 2)
 
-        if balance_trans >= for_debt['amount']:
-            balance_trans = balance_trans - for_debt['amount']
-            debt_negative = {'description': for_debt['description'],
-                             'currency': for_debt['currency'],
-                             'amount': -(for_debt['amount'])}
-            transactions_done = debt_negative
-        else:
-            peding_debt = for_debt
 
-    for for_transactions in transactions:
-        transactions_done = for_transactions
 
-    expect_result = {'balance': round(balance_trans, 2) ,
-                     'transactions': [transactions_done],
-                     'peding_debt': [peding_debt]}
 
-    return expect_result

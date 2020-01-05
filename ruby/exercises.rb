@@ -287,3 +287,26 @@ def doc_email(emails)
 
   { 'customers' => customers, 'stats' => stats }
 end
+
+def parse_file(file_name)
+  file_path = "./spec/" + file_name
+  debts = {}
+  debt = {}
+  total = []
+
+
+  data = File.read(file_path)
+
+  linhas = data.split("\r\n")
+
+  linhas.each do |linha|
+
+    debts = {'x' => linha.split(',')[0], 'y' => linha.split(',')[1]}
+
+    if debts['x'] != 'name' && debts['y'] != 'debt'
+      debt = {'name' => linha.split(',')[0], 'value' => linha.split(',')[1].to_i}
+    end
+
+  end
+
+end
