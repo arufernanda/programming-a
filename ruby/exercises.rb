@@ -304,9 +304,14 @@ def parse_file(file_name)
     debts = {'x' => linha.split(',')[0], 'y' => linha.split(',')[1]}
 
     if debts['x'] != 'name' && debts['y'] != 'debt'
-      debt = {'name' => linha.split(',')[0], 'value' => linha.split(',')[1].to_i}
+      debt = {'name' => linha.split(',')[0], 'value' => linha.split(',')[1].to_f}
     end
 
+    total << debt
+    puts total[2].inspect
+  
   end
 
 end
+
+

@@ -250,10 +250,3 @@ def doc_email(emails):
             }
       
     print (results)
-
-
-
-
-
-
-
