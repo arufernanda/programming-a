@@ -25,7 +25,7 @@ REPL:
 irb
 ```
 To exit:
-```bash
+```ruby
 exit
 ```
 
@@ -51,7 +51,7 @@ REPL:
 python
 ```
 To exit:
-```bash
+```python
 exit()
 ```
 ## JavaScript
@@ -75,4 +75,4 @@ REPL:
 node
 ```
 To exit:
-<kbd>Ctrl</kdb> + <kbd>C</kbd> <kbd>Ctrl</kdb> + <kbd>C</kbd>
+<kbd>Ctrl</kbd> + <kbd>C</kbd> <kbd>Ctrl</kbd> + <kbd>C</kbd>

@@ -206,3 +206,47 @@ def hash_spendings(transactions, dollar):
     spending_in_real_abs = abs(spending_in_real)
     spending_in_real_round = math.ceil(spending_in_real_abs * 100.0) / 100.0
     return spending_in_real_round
+
+
+def doc_email(emails):
+    customers = []
+    stats = {}
+    gmail = 0
+    hotmail = 0
+    yahoo = 0
+    yahoobr = 0
+    results = {}
+
+    for email in emails:
+      email_parts = email.split('@')
+    
+      name = email_parts[0]
+      provider = email_parts[1].lower
+
+      customers = { 'name': name, 'provider': provider()}
+
+      print (customers)
+      print ('________________________')
+
+      if 'gmail' in provider():
+        gmail = 1 + gmail
+
+      if 'hotmail' in provider():
+        hotmail = 1 + hotmail
+
+      if 'yahoo' in provider() and '.br' not in provider():
+        yahoo = 1 + yahoo
+
+      if 'yahoo.com.br' in provider():
+        yahoobr = 1 + yahoobr
+
+    results = { 'status': {
+                'gmail.com': gmail,
+                'hotmail.com': hotmail,
+                'yahoo.com': yahoo,
+                'yahoo.com.br': yahoobr
+                },
+                'customers': customers
+            }
+      
+    print (results)

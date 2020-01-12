@@ -108,14 +108,37 @@ def test_sum_array():
     assert exercises.sum_array([1, 2], [], [3, 4]) == 6
 
 
-def test_hash_spendings():
-    transactions = [
-        {'currency': 'R$', 'amount': 15.75},
-        {'currency': 'R$', 'amount': -17.50},
-        {'currency': 'US$', 'amount': 7.98},
-        {'currency': 'US$', 'amount': -18.70},
-        {'currency': 'US$', 'amount': 2}
+def test_doc_email():
+    emails = [
+      'elizabeth@gmail.com',
+      'JAMES@GMAIL.com',
+      'jennifer@gMAIL.com',
+      'john@gmail.com',
+      'linda@hotmail.com',
+      'michael@HOTmail.com',
+      'patricia@yahoo.com',
+      'robert@yahoo.com.br',
+      'william@YAHOO.COM'
     ]
 
-    assert exercises.hash_spendings(transactions, 4.02) == 92.68
-    assert exercises.hash_spendings(transactions, 3.98) == 91.93
+    assert exercises.doc_email(emails) == {
+        {
+            'stats': {
+            'gmail.com': 4,
+            'hotmail.com': 2,
+            'yahoo.com': 2,
+            'yahoo.com.br': 1
+            },
+            'customers': [
+                { 'name': 'Elizabeth', 'provider': 'gmail.com' },
+                { 'name': 'James', 'provider': 'gmail.com' },
+                { 'name': 'Jennifer', 'provider': 'gmail.com' },
+                { 'name': 'John', 'provider': 'gmail.com' },
+                { 'name': 'Linda', 'provider': 'hotmail.com' },
+                { 'name': 'Michael', 'provider': 'hotmail.com' },
+                { 'name': 'Patricia', 'provider': 'yahoo.com' },
+                { 'name': 'Robert', 'provider': 'yahoo.com.br' },
+                { 'name': 'William', 'provider': 'yahoo.com' }
+            ]
+        }
+    }
