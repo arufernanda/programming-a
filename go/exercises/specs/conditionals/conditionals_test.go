@@ -47,4 +47,13 @@ func TestConditionals(t *testing.T) {
 	assert.Equal(t, uint8(5), bottlesBoxTwo[0])
 	assert.Equal(t, 6, len(bottlesBoxTwo))
 	assert.Equal(t, uint16(20), conditionals.SumWeights(bottlesBoxTwo))
+
+	var expectArray []uint
+	expectArray = append(expectArray, 1)
+	expectArray = append(expectArray, 2)
+	expectArray = append(expectArray, 3)
+	expectArray = append(expectArray, 4)
+	expectArray = append(expectArray, 5)
+	assert.Equal(t, expectArray, conditionals.Count(5))
+
 }
