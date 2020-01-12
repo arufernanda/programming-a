@@ -225,3 +225,65 @@ def hash_spendings(transactions, dollar)
 
   spending_in_real.abs.ceil(2)
 end
+
+def hash_bank(transactions, debt, dollar)
+  balance_trans = 0
+  peding_debt = []
+  transactions_done = []
+
+  transactions.each do |for_transactions|
+    if for_transactions['currency'] == 'R$'
+      balance_trans += for_transactions['amount']
+    end
+
+    if for_transactions['currency'] == 'US$'
+      balance_trans += for_transactions['amount'] * dollar
+    end
+  end
+
+  debt.each do |for_debt|
+    if for_debt['currency'] == 'US$'
+      for_debt['amount'] = (for_debt['amount'] * dollar).round(2)
+    end
+
+    if balance_trans >= for_debt['amount']
+      balance_trans -= for_debt['amount']
+      debit_negative = { 'description' => for_debt['description'],
+                         'currency' => for_debt['currency'],
+                         'amount' => -(for_debt['amount']) }
+      transactions_done << debit_negative
+    else
+      peding_debt << for_debt
+    end
+  end
+
+  transactions.each do |for_trans|
+    transactions_done << for_trans
+  end
+
+  expect_result = { 'balance' => balance_trans.round(2),
+                    'transactions' => transactions_done,
+                    'peding_debt' => peding_debt }
+
+  expect_result
+end
+
+def doc_email(emails)
+  customers = []
+  stats = {}
+
+  emails.each do |email|
+    email_parts = email.split('@')
+
+    name = email_parts[0].capitalize
+    provider = email_parts[1].downcase
+
+    customers << { 'name' => name, 'provider' => provider }
+
+    stats[provider] = 0 unless stats.key?(provider)
+
+    stats[provider] += 1
+  end
+
+  { 'customers' => customers, 'stats' => stats }
+end

@@ -119,3 +119,37 @@ def test_hash_spendings():
 
     assert exercises.hash_spendings(transactions, 4.02) == 92.68
     assert exercises.hash_spendings(transactions, 3.98) == 91.93
+
+
+def test_bank_account():
+    transactions = [
+        { 'description': 'pão', 'currency': 'R$', 'amount': -13.21 },
+        { 'description': 'chocolate', 'currency': 'US$', 'amount': -2.35 },
+        { 'description': 'água', 'currency': 'R$', 'amount': -7.10 },
+        { 'description': 'freela', 'currency': 'R$', 'amount': 75.00 }
+    ]
+
+    debt = [ 
+        { 'description': 'refrigerante', 'currency': 'R$', 'amount': 7.10 },
+        { 'description': 'arroz', 'currency': 'R$', 'amount': 13.21 },
+        { 'description': 'café', 'currency': 'US$', 'amount': 7.15 },
+        { 'description': 'milho', 'currency': 'R$', 'amount': 15.29 },
+        { 'description': 'suco de laranja', 'currency': 'R$', 'amount': 9.62 }
+    ]
+
+    assert exercises.bank_account(transactions, debt, 4.02) == [
+        {'balance': 0.02,'transactions': [
+        { 'description': 'refrigerante', 'currency': 'R$', 'amount': -7.10 },
+        { 'description': 'arroz', 'currency': 'R$', 'amount': -13.21 },
+        { 'description': 'milho', 'currency': 'R$', 'amount': -15.29 },
+        { 'description': 'suco de laranja', 'currency': 'R$', 'amount': -9.62 },
+        { 'description': 'pão', 'currency': 'R$','amount': -13.21 },
+        { 'description': 'chocolate', 'currency': 'US$', 'amount': -2.35 },
+        { 'description': 'água', 'currency': 'R$', 'amount': -7.10 },
+        { 'description': 'freela', 'currency': 'R$', 'amount': 75.00 }
+        ],
+        'peding_debt': [
+        { 'description': 'café', 'currency': 'US$', 'amount': 28.74 }
+        ]
+        }
+    ]
