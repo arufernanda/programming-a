@@ -123,3 +123,10 @@ def test_hash_spendings():
 
 def test_count():
     assert exercises.count(5) == [1, 2, 3, 4, 5]
+
+
+def test_box_bottles():
+    assert exercises.box_bottles(
+        6, 1.5, 12.5) == ([1.5, 1.5, 1.5, 1.5, 1.5, 1.5], 3.5)
+    assert exercises.box_bottles(
+        4, 1.2, 4.2) == ([1.2, 1.2, 1.2, 1.2], 0.6)

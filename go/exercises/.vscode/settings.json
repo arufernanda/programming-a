@@ -1,0 +1,6 @@
+{
+    "go.buildOnSave": "off",
+    "go.vetOnSave": "off",
+    "go.lintOnSave": "off",
+    "python.linting.lintOnSave": false
+}

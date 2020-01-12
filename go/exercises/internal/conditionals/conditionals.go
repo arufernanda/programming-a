@@ -1,5 +1,9 @@
 package conditionals
 
+import (
+	"math"
+)
+
 func Sum(numberOne float32, numberTwo float32) float32 {
 	return numberOne + numberTwo
 }
@@ -67,4 +71,25 @@ func Count(number uint) []uint {
 		}
 	}
 	return countArray
+}
+
+func BoxBottles(sizeBox float64, sizeBottle float64, drinkAmount float64) ([]float64, float64) {
+	var box []float64
+	var index float64 = 0
+	var remaining float64
+	var sumDrink float64
+
+	for {
+		box = append(box, sizeBottle)
+		index = index + 1
+
+		remaining = math.Abs(drinkAmount - (sizeBottle * sizeBox))
+
+		sumDrink = index * sizeBottle
+
+		if sumDrink >= drinkAmount || index == sizeBox {
+			break
+		}
+	}
+	return box, math.Round(remaining*100) / 100
 }
