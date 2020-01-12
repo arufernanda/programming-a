@@ -206,3 +206,15 @@ def hash_spendings(transactions, dollar):
     spending_in_real_abs = abs(spending_in_real)
     spending_in_real_round = math.ceil(spending_in_real_abs * 100.0) / 100.0
     return spending_in_real_round
+
+
+def count(number):
+    result_array = []
+    one = 1
+
+    while True:
+        result_array.append(one)
+        one = one + 1
+        if one > number:
+            break
+    return result_array

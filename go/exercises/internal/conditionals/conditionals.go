@@ -53,3 +53,18 @@ func SumWeights(weights [6]uint8) uint16 {
 
 	return result
 }
+
+func Count(number uint) []uint {
+	var countArray []uint
+	var one uint = 1
+
+	for {
+		countArray = append(countArray, one)
+		one = one + 1
+
+		if one > number {
+			break
+		}
+	}
+	return countArray
+}

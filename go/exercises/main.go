@@ -3,7 +3,7 @@ package main
 import (
 	"exercises/internal/conditionals"
 	"fmt"
-	"strconv"
+	//"strconv"
 )
 
 func main() {
@@ -15,10 +15,12 @@ func main() {
 	bottlesBox[5] = 2
 	bottlesBox[4] = 255
 
-	var resultSum string = strconv.Itoa(int(conditionals.SumWeights(bottlesBox)))
+	//var resultSum string = strconv.Itoa(int(conditionals.SumWeights(bottlesBox)))
+
+	var resultArray []uint = conditionals.Count(5)
 
 	fmt.Printf("\n")
-	fmt.Printf("result: ")
-	fmt.Printf(resultSum)
+	fmt.Printf("resultArray: ")
+	fmt.Printf("%+v", resultArray)
 	fmt.Printf("\n\n")
 }

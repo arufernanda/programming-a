@@ -119,3 +119,7 @@ def test_hash_spendings():
 
     assert exercises.hash_spendings(transactions, 4.02) == 92.68
     assert exercises.hash_spendings(transactions, 3.98) == 91.93
+
+
+def test_count():
+    assert exercises.count(5) == [1, 2, 3, 4, 5]
