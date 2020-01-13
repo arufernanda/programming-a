@@ -143,3 +143,12 @@ func Letters(letter string) string {
 		return "consoante"
 	}
 }
+
+func SumArray(array []int) int {
+	var sum int = 0
+
+	for _, num := range array {
+		sum += num
+	}
+	return sum
+}

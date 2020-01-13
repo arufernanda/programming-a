@@ -103,4 +103,10 @@ func TestConditionals(t *testing.T) {
 	assert.Equal(t, string("vogal"), conditionals.Letters("a"))
 	assert.Equal(t, string("consoante"), conditionals.Letters("d"))
 	assert.Equal(t, string("consoante"), conditionals.Letters("z"))
+
+	var arraySum []int
+	arraySum = append(arraySum, 1)
+	arraySum = append(arraySum, 3)
+	arraySum = append(arraySum, 4)
+	assert.Equal(t, int(8), conditionals.SumArray(arraySum))
 }
