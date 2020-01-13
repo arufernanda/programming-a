@@ -76,18 +76,22 @@ func Count(number uint) []uint {
 func BoxBottles(sizeBox float64, sizeBottle float64, drinkAmount float64) ([]float64, float64) {
 	var box []float64
 	var index float64 = 0
-	var remaining float64
-	var sumDrink float64
+	var remaining float64 = drinkAmount
+	var limit uint16 = 10000
 
 	for {
-		box = append(box, sizeBottle)
-		index = index + 1
 
-		remaining = math.Abs(drinkAmount - (sizeBottle * sizeBox))
+		if sizeBottle <= remaining {
+			box = append(box, sizeBottle)
+			remaining = remaining - sizeBottle
+			index = index + 1
+		}
 
-		sumDrink = index * sizeBottle
+		if sizeBottle > remaining || index == sizeBox {
+			break
+		}
 
-		if sumDrink >= drinkAmount || index == sizeBox {
+		if limit == 0 {
 			break
 		}
 	}

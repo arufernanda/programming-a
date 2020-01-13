@@ -77,7 +77,6 @@ func TestConditionals(t *testing.T) {
 	expectedBoxBottleTwo = append(expectedBoxBottleTwo, 1.2)
 	expectedBoxBottleTwo = append(expectedBoxBottleTwo, 1.2)
 	expectedBoxBottleTwo = append(expectedBoxBottleTwo, 1.2)
-	expectedBoxBottleTwo = append(expectedBoxBottleTwo, 1.2)
 
 	var boxBottleTwo []float64
 	var remainingTwo float64
