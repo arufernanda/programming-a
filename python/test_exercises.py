@@ -130,3 +130,14 @@ def test_box_bottles():
         6, 1.5, 12.5) == ([1.5, 1.5, 1.5, 1.5, 1.5, 1.5], 3.5)
     assert exercises.box_bottles(
         4, 1.2, 4.2) == ([1.2, 1.2, 1.2], 0.6)
+
+def test_candy():
+    assert exercises.candy(500, 305, 120) == 75
+    assert exercises.candy(5000, 2000, 100) == 2900
+    assert exercises.candy(10, 2, 1) == 7
+
+
+def test_production_breads():
+    assert exercises.production_breads(4) == 100
+    assert exercises.production_breads(2) == 50
+

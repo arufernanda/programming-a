@@ -235,3 +235,20 @@ def box_bottles(size_box, size_bottle, drink_amount):
             break
 
     return box, round(remaining, 2)
+
+
+def candy(buy, eat, give):
+    remaining = 0
+
+    remaining = buy - (eat + give)
+
+    return remaining
+
+
+
+def production_breads(hours):
+    breads = 0
+
+    breads = hours * 25
+
+    return breads

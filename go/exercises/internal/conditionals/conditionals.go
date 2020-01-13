@@ -97,3 +97,19 @@ func BoxBottles(sizeBox float64, sizeBottle float64, drinkAmount float64) ([]flo
 	}
 	return box, math.Round(remaining*100) / 100
 }
+
+func Candy(buy int, eat int, give int) int {
+	var remaining int
+
+	remaining = buy - (eat + give)
+
+	return remaining
+}
+
+func ProductionBreads(hours int) int {
+	var breads int = 0
+
+	breads = 25 * hours
+
+	return breads
+}

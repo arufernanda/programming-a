@@ -86,4 +86,10 @@ func TestConditionals(t *testing.T) {
 	assert.Equal(t, expectedBoxBottleTwo, boxBottleTwo)
 	assert.Equal(t, float64(0.6), remainingTwo)
 
+	assert.Equal(t, int(75), conditionals.Candy(500, 305, 120))
+	assert.Equal(t, int(2900), conditionals.Candy(5000, 2000, 100))
+	assert.Equal(t, int(7), conditionals.Candy(10, 2, 1))
+
+	assert.Equal(t, int(100), conditionals.ProductionBreads(4))
+	assert.Equal(t, int(50), conditionals.ProductionBreads(2))
 }
