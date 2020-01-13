@@ -252,3 +252,13 @@ def production_breads(hours):
     breads = hours * 25
 
     return breads
+
+
+def gain (purchase, sold, repurchased, sold_again):
+    gains = 0 
+    spending = 0
+
+    spending = purchase + repurchased
+    gains = (sold + sold_again) - spending
+
+    return gains

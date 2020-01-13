@@ -141,3 +141,7 @@ def test_production_breads():
     assert exercises.production_breads(4) == 100
     assert exercises.production_breads(2) == 50
 
+
+def test_gain():
+    assert exercises.gain(70, 80, 90, 100) == 20
+    assert exercises.gain(70, 80, 90, 200) == 120

@@ -92,4 +92,11 @@ func TestConditionals(t *testing.T) {
 
 	assert.Equal(t, int(100), conditionals.ProductionBreads(4))
 	assert.Equal(t, int(50), conditionals.ProductionBreads(2))
+
+	assert.Equal(t, int(20), conditionals.Gain(70, 80, 90, 100))
+	assert.Equal(t, int(120), conditionals.Gain(70, 80, 90, 200))
+
+	assert.Equal(t, string("primária"), conditionals.Colors("red"))
+	assert.Equal(t, string("secundária"), conditionals.Colors("green"))
+	assert.Equal(t, string("others"), conditionals.Colors("pink"))
 }

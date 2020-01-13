@@ -113,3 +113,24 @@ func ProductionBreads(hours int) int {
 
 	return breads
 }
+
+func Gain(purchase int, sold int, repurchased int, soldAgain int) int {
+	var gain int = 0
+	var spending int = 0
+
+	spending = purchase + repurchased
+	gain = (sold + soldAgain) - spending
+
+	return gain
+}
+
+func Colors(color string) string {
+
+	if color == "red" || color == "yeloow" || color == "blue" {
+		return "primária"
+	} else if color == "green" || color == "orange" || color == "purple" {
+		return "secundária"
+	} else {
+		return "others"
+	}
+}
