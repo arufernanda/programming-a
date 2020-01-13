@@ -2,8 +2,9 @@ package specs
 
 import (
 	"exercises/internal/conditionals"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestConditionals(t *testing.T) {
@@ -55,5 +56,34 @@ func TestConditionals(t *testing.T) {
 	expectArray = append(expectArray, 4)
 	expectArray = append(expectArray, 5)
 	assert.Equal(t, expectArray, conditionals.Count(5))
+
+	var expectedBoxBottle []float64
+	expectedBoxBottle = append(expectedBoxBottle, 1.5)
+	expectedBoxBottle = append(expectedBoxBottle, 1.5)
+	expectedBoxBottle = append(expectedBoxBottle, 1.5)
+	expectedBoxBottle = append(expectedBoxBottle, 1.5)
+	expectedBoxBottle = append(expectedBoxBottle, 1.5)
+	expectedBoxBottle = append(expectedBoxBottle, 1.5)
+
+	var boxBottle []float64
+	var remaining float64
+
+	boxBottle, remaining = conditionals.BoxBottles(6, 1.5, 12.5)
+
+	assert.Equal(t, expectedBoxBottle, boxBottle)
+	assert.Equal(t, float64(3.5), remaining)
+
+	var expectedBoxBottleTwo []float64
+	expectedBoxBottleTwo = append(expectedBoxBottleTwo, 1.2)
+	expectedBoxBottleTwo = append(expectedBoxBottleTwo, 1.2)
+	expectedBoxBottleTwo = append(expectedBoxBottleTwo, 1.2)
+
+	var boxBottleTwo []float64
+	var remainingTwo float64
+
+	boxBottleTwo, remainingTwo = conditionals.BoxBottles(4, 1.2, 4.2)
+
+	assert.Equal(t, expectedBoxBottleTwo, boxBottleTwo)
+	assert.Equal(t, float64(0.6), remainingTwo)
 
 }

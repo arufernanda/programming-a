@@ -218,3 +218,20 @@ def count(number):
         if one > number:
             break
     return result_array
+
+
+def box_bottles(size_box, size_bottle, drink_amount):
+    box = []
+    index = 0
+    remaining = drink_amount
+
+    while True:
+        if size_bottle <= remaining:
+            box.append(size_bottle)
+            remaining = remaining - size_bottle
+            index = index + 1
+
+        if index == size_box or size_bottle > remaining:
+            break
+
+    return box, round(remaining, 2)

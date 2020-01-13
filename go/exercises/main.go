@@ -17,10 +17,12 @@ func main() {
 
 	//var resultSum string = strconv.Itoa(int(conditionals.SumWeights(bottlesBox)))
 
-	var resultArray []uint = conditionals.Count(5)
+	//var resultArray []uint = conditionals.Count(5)
+	var box []float32 = conditionals.BoxBottles(6, 1.5, 12.5)
+	var remaining float32 = conditionals.BoxBottles(6, 1.5, 12.5)
 
 	fmt.Printf("\n")
 	fmt.Printf("resultArray: ")
-	fmt.Printf("%+v", resultArray)
+	fmt.Printf("%+v %+v", box, remaining)
 	fmt.Printf("\n\n")
 }
