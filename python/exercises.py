@@ -262,3 +262,4 @@ def gain (purchase, sold, repurchased, sold_again):
     gains = (sold + sold_again) - spending
 
     return gains
+    

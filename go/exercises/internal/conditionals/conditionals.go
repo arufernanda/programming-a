@@ -152,3 +152,14 @@ func SumArray(array []int) int {
 	}
 	return sum
 }
+
+func ReturnOddNumbers(array []int) []int {
+	var returnsarray []int
+
+	for _, num := range array {
+		if num%2 != 0 {
+			returnsarray = append(returnsarray, num)
+		}
+	}
+	return returnsarray
+}

@@ -109,4 +109,11 @@ func TestConditionals(t *testing.T) {
 	arraySum = append(arraySum, 3)
 	arraySum = append(arraySum, 4)
 	assert.Equal(t, int(8), conditionals.SumArray(arraySum))
+
+	var expectsArray []int
+	expectsArray = append(expectsArray, 1)
+	expectsArray = append(expectsArray, 3)
+
+	assert.Equal(t, expectsArray, conditionals.ReturnOddNumbers(arraySum))
+
 }
