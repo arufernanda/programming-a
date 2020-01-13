@@ -99,4 +99,8 @@ func TestConditionals(t *testing.T) {
 	assert.Equal(t, string("primária"), conditionals.Colors("red"))
 	assert.Equal(t, string("secundária"), conditionals.Colors("green"))
 	assert.Equal(t, string("others"), conditionals.Colors("pink"))
+
+	assert.Equal(t, string("vogal"), conditionals.Letters("a"))
+	assert.Equal(t, string("consoante"), conditionals.Letters("d"))
+	assert.Equal(t, string("consoante"), conditionals.Letters("z"))
 }

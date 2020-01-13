@@ -134,3 +134,12 @@ func Colors(color string) string {
 		return "others"
 	}
 }
+
+func Letters(letter string) string {
+
+	if letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" {
+		return "vogal"
+	} else {
+		return "consoante"
+	}
+}
