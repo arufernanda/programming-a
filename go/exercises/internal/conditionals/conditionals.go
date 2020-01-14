@@ -233,3 +233,11 @@ func Backup(giga float64) float64 {
 
 	return cdRoms
 }
+
+func DiscountMax(price float64) float64 {
+	var discountMaxi float64 = 0
+
+	discountMaxi = math.Floor(((price - 11.0) * 100) / price)
+
+	return discountMaxi
+}

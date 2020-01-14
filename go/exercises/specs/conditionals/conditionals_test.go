@@ -129,4 +129,10 @@ func TestConditionals(t *testing.T) {
 
 	assert.Equal(t, float64(2), conditionals.Backup(1))
 
+	assert.Equal(t, float64(0), conditionals.DiscountMax(11.0))
+	assert.Equal(t, float64(15), conditionals.DiscountMax(13.0))
+	assert.Equal(t, float64(95), conditionals.DiscountMax(257.21))
+	assert.Equal(t, float64(96), conditionals.DiscountMax(275.0))
+	assert.Equal(t, float64(95), conditionals.DiscountMax(274.99))
+
 }
