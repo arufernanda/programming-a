@@ -163,3 +163,73 @@ func ReturnOddNumbers(array []int) []int {
 	}
 	return returnsarray
 }
+
+func Discount(price float64, percent float64) float64 {
+	var priceWithDiscount float64 = 0
+	var discounts float64 = 0
+
+	discounts = (price * percent) / 100
+	priceWithDiscount = price - discounts
+
+	if priceWithDiscount < 9 {
+		priceWithDiscount = 9
+	}
+	return priceWithDiscount
+}
+
+func Installment(price float64) int8 {
+
+	if price/12 >= 11.50 {
+		return 12
+	}
+
+	if price/11 >= 11.50 {
+		return 11
+	}
+
+	if price/10 >= 11.50 {
+		return 10
+	}
+
+	if price/9 >= 11.50 {
+		return 9
+	}
+
+	if price/8 >= 11.50 {
+		return 8
+	}
+
+	if price/7 >= 11.50 {
+		return 7
+	}
+
+	if price/6 >= 11.50 {
+		return 6
+	}
+
+	if price/5 >= 11.50 {
+		return 5
+	}
+
+	if price/4 >= 11.50 {
+		return 4
+	}
+
+	if price/3 >= 11.50 {
+		return 3
+	}
+
+	if price/2 >= 11.50 {
+		return 2
+	} else {
+		return 1
+	}
+}
+
+func Backup(giga float64) float64 {
+	var cdRoms float64 = 0
+
+	cdRoms = math.Ceil((giga * 1024) / 700)
+
+	return cdRoms
+}

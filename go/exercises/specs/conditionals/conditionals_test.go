@@ -116,4 +116,17 @@ func TestConditionals(t *testing.T) {
 
 	assert.Equal(t, expectsArray, conditionals.ReturnOddNumbers(arraySum))
 
+	assert.Equal(t, float64(9.0), conditionals.Discount(10.0, 10.0))
+	assert.Equal(t, float64(95.0), conditionals.Discount(100.0, 5.0))
+	assert.Equal(t, float64(750.0), conditionals.Discount(1000.0, 25.0))
+	assert.Equal(t, float64(74.10), conditionals.Discount(76.0, 2.5))
+	assert.Equal(t, float64(9), conditionals.Discount(9.90, 10.0))
+
+	assert.Equal(t, int8(2), conditionals.Installment(27.35))
+	assert.Equal(t, int8(1), conditionals.Installment(11.59))
+	assert.Equal(t, int8(1), conditionals.Installment(22.99))
+	assert.Equal(t, int8(12), conditionals.Installment(500.0))
+
+	assert.Equal(t, float64(2), conditionals.Backup(1))
+
 }
