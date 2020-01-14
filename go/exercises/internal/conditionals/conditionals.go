@@ -241,3 +241,30 @@ func DiscountMax(price float64) float64 {
 
 	return discountMaxi
 }
+
+func AgeRange(year int16, month int16) string {
+	var ageForMonth int16 = 0
+	var monthForMonth int16 = 0
+
+	ageForMonth = year * 12
+	monthForMonth = ageForMonth + month
+
+	if monthForMonth >= 0 && monthForMonth <= 162 {
+		return "criança"
+	}
+
+	if monthForMonth >= 163 && monthForMonth <= 293 {
+		return "jovem"
+	}
+
+	if monthForMonth >= 294 && monthForMonth <= 768 {
+		return "adulta"
+	}
+
+	if monthForMonth >= 769 && monthForMonth <= 804 {
+		return "idosa"
+	} else {
+		return "error"
+	}
+
+}

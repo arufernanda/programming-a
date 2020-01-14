@@ -135,4 +135,9 @@ func TestConditionals(t *testing.T) {
 	assert.Equal(t, float64(96), conditionals.DiscountMax(275.0))
 	assert.Equal(t, float64(95), conditionals.DiscountMax(274.99))
 
+	assert.Equal(t, string("criança"), conditionals.AgeRange(13, 6))
+	assert.Equal(t, string("jovem"), conditionals.AgeRange(24, 0))
+	assert.Equal(t, string("adulta"), conditionals.AgeRange(64, 0))
+	assert.Equal(t, string("idosa"), conditionals.AgeRange(64, 1))
+
 }
