@@ -266,5 +266,12 @@ func AgeRange(year int16, month int16) string {
 	} else {
 		return "error"
 	}
+}
 
+func PageAndProducts(products float64, productsforPage float64) float64 {
+	var totalPages float64 = 0
+
+	totalPages = math.Ceil(products / productsforPage)
+
+	return totalPages
 }

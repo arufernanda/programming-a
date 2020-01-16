@@ -140,4 +140,6 @@ func TestConditionals(t *testing.T) {
 	assert.Equal(t, string("adulta"), conditionals.AgeRange(64, 0))
 	assert.Equal(t, string("idosa"), conditionals.AgeRange(64, 1))
 
+	assert.Equal(t, float64(10), conditionals.PageAndProducts(100, 10))
+	assert.Equal(t, float64(3), conditionals.PageAndProducts(30, 14))
 }
