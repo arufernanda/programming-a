@@ -142,4 +142,16 @@ func TestConditionals(t *testing.T) {
 
 	assert.Equal(t, float64(10), conditionals.PageAndProducts(100, 10))
 	assert.Equal(t, float64(3), conditionals.PageAndProducts(30, 14))
+
+	var arrayyear []int
+	arrayyear = append(arrayyear, 1994)
+	arrayyear = append(arrayyear, 1995)
+	arrayyear = append(arrayyear, 1996)
+
+	var arrayreturn []string
+	arrayreturn = append(arrayreturn, "parabéns pelos seus 26 anos")
+	arrayreturn = append(arrayreturn, "parabéns pelos seus 25 anos")
+	arrayreturn = append(arrayreturn, "parabéns pelos seus 24 anos")
+	assert.Equal(t, arrayreturn, conditionals.Felicitacions(arrayyear))
+
 }

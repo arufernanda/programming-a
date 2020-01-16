@@ -1,7 +1,9 @@
 package conditionals
 
 import (
+	"fmt"
 	"math"
+	"strconv"
 )
 
 func Sum(numberOne float32, numberTwo float32) float32 {
@@ -274,4 +276,21 @@ func PageAndProducts(products float64, productsforPage float64) float64 {
 	totalPages = math.Ceil(products / productsforPage)
 
 	return totalPages
+}
+
+func Felicitacions(year []int) []string {
+	var mensageReturn []string
+	var age int = 0
+
+	for _, num := range year {
+
+		age = 2020 - num
+
+		a := strconv.Itoa(age)
+
+		mensageReturn = append(mensageReturn, fmt.Sprintf("parabéns pelos seus %+v %+s", a, "anos"))
+
+	}
+
+	return mensageReturn
 }
